@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace | Ilhamm</title>
+    <link href="/styles/tailwind.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-[#111111] text-[#FFF6F2] font-body overflow-x-hidden antialiased pt-32">
+
+    <div id="navbar-container"></div>
+
+    <main class="max-w-[1400px] mx-auto px-6 pb-32 flex flex-col md:flex-row gap-12">
+
+        <!-- Sidebar Filters -->
+        <aside class="w-full md:w-64 flex-shrink-0">
+            <h1 class="font-hero text-4xl text-gold-gradient mb-10">Collections</h1>
+
+            <div class="space-y-8">
+                <div>
+                    <h3
+                        class="text-[#E6B7A9] font-medium tracking-widest text-xs uppercase mb-4 border-b border-white/10 pb-2">
+                        Occasion</h3>
+                    <ul class="space-y-3 font-light text-sm">
+                        <li><label class="flex items-center gap-3 cursor-pointer"><input type="checkbox"
+                                    class="accent-[#5A0F2E]"> Wedding (12)</label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer"><input type="checkbox"
+                                    class="accent-[#5A0F2E]"> Anniversary (8)</label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer"><input type="checkbox"
+                                    class="accent-[#5A0F2E]"> Birthday (24)</label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer"><input type="checkbox"
+                                    class="accent-[#5A0F2E]"> Corporate (15)</label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer"><input type="checkbox"
+                                    class="accent-[#5A0F2E]"> Festive (10)</label></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3
+                        class="text-[#E6B7A9] font-medium tracking-widest text-xs uppercase mb-4 border-b border-white/10 pb-2">
+                        Price Range</h3>
+                    <ul class="space-y-3 font-light text-sm">
+                        <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="price"
+                                    class="accent-[#5A0F2E]"> Under ₹5,000</label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="price"
+                                    class="accent-[#5A0F2E]"> ₹5,000 - ₹10,000</label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="price"
+                                    class="accent-[#5A0F2E]"> ₹10,000 - ₹25,000</label></li>
+                        <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="price"
+                                    class="accent-[#5A0F2E]"> Bespoke (₹25k+)</label></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <div class="flex-1">
+            <div class="flex justify-between items-center mb-8 pb-4 border-b border-white/5">
+                <span class="text-sm font-light text-white/60">Showing 24 products</span>
+                <select
+                    class="bg-transparent border border-white/10 rounded-lg px-4 py-2 text-sm text-[#FFF6F2] focus:outline-none focus:border-[#E6B7A9]">
+                    <option class="bg-[#111]">Sort by: Featured</option>
+                    <option class="bg-[#111]">Sort by: Price (Low to High)</option>
+                    <option class="bg-[#111]">Sort by: Price (High to Low)</option>
+                </select>
+            </div>
+
+            <div id="marketplace-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically injected items -->
+            </div>
+        </div>
+
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script type="module" src="/src/pages/marketplace.js"></script>
+</body>
+
+</html>

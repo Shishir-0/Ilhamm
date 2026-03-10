@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metaverse Showroom | Ilhamm</title>
+    <link href="/styles/tailwind.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-[#111111] text-[#FFF6F2] font-body overflow-hidden antialiased">
+
+    <div id="navbar-container"></div>
+
+    <main class="w-full h-screen relative">
+        <!-- 3D Canvas -->
+        <div id="showroom-canvas-container" class="absolute inset-0 z-0"></div>
+
+        <!-- UI Overlay -->
+        <div
+            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center pointer-events-none">
+            <div class="glass px-6 py-3 rounded-full flex gap-4 pointer-events-auto items-center">
+                <span class="text-xs uppercase tracking-widest text-[#E6B7A9]">Navigation</span>
+                <div class="h-4 w-px bg-white/20"></div>
+                <div class="flex gap-2">
+                    <kbd class="bg-[#111] border border-white/20 rounded px-2 py-1 text-xs font-mono">W</kbd>
+                    <kbd class="bg-[#111] border border-white/20 rounded px-2 py-1 text-xs font-mono">A</kbd>
+                    <kbd class="bg-[#111] border border-white/20 rounded px-2 py-1 text-xs font-mono">S</kbd>
+                    <kbd class="bg-[#111] border border-white/20 rounded px-2 py-1 text-xs font-mono">D</kbd>
+                </div>
+                <div class="h-4 w-px bg-white/20"></div>
+                <span class="text-xs text-white/60">Drag to look</span>
+            </div>
+
+            <p class="mt-4 text-sm font-light text-white/50 text-center max-w-md">
+                Explore the Ilhamm digital boutique. Click on any showcased hamper to view details and purchase.
+            </p>
+        </div>
+
+        <!-- Crosshair -->
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-1 h-1 bg-white/50 rounded-full pointer-events-none">
+        </div>
+    </main>
+
+    <script type="module" src="/src/pages/showroom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bespoke Configurator | Ilhamm</title>
+    <link href="/styles/tailwind.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-[#111111] text-[#FFF6F2] font-body overflow-hidden antialiased">
+
+    <div id="navbar-container"></div>
+
+    <main class="w-full h-screen flex flex-col md:flex-row pt-20">
+
+        <!-- Left Side: 3D Viewer -->
+        <div class="relative w-full md:w-2/3 h-[50vh] md:h-full bg-gradient-to-br from-[#111] to-[#1a0a10]">
+            <div id="configurator-canvas-container" class="absolute inset-0 z-0 cursor-move"></div>
+
+            <div class="absolute top-8 left-8 z-10">
+                <h1 class="font-hero text-3xl text-gold-gradient mb-2">Build Your Hamper</h1>
+                <p class="text-sm text-white/60 font-light">Drag to rotate. Scroll to zoom.</p>
+            </div>
+
+            <!-- Total Price Overlay -->
+            <div class="absolute bottom-8 left-8 z-10 glass px-6 py-4 rounded-2xl flex items-center gap-6">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-[#E6B7A9] block mb-1">Total Value</span>
+                    <span class="font-hero text-2xl text-white" id="config-total">₹4,500</span>
+                </div>
+                <button
+                    class="bg-[#E6B7A9] text-[#111] font-medium px-6 py-2 rounded-full hover:bg-white transition-colors text-sm uppercase tracking-widest">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Side: Controls Panel -->
+        <div
+            class="w-full md:w-1/3 h-[50vh] md:h-full bg-[#0a0406] border-l border-white/5 overflow-y-auto custom-scrollbar p-8 z-10 shadow-[-20px_0_40px_rgba(0,0,0,0.5)]">
+
+            <!-- Step Indicators -->
+            <div
+                class="flex justify-between items-center mb-10 text-xs font-medium tracking-widest uppercase text-white/40">
+                <span class="text-[#E6B7A9]">1. Basket</span>
+                <span>2. Items</span>
+                <span>3. Decor</span>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Basket Selection -->
+                <section>
+                    <h3 class="font-hero text-xl text-white mb-4 border-b border-white/10 pb-2">Select Base</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button
+                            class="border border-[#E6B7A9] bg-[#5A0F2E]/20 rounded-xl p-4 text-left hover:bg-[#5A0F2E]/40 transition-colors">
+                            <span class="block text-sm text-white mb-1">Classic Wicker</span>
+                            <span class="block text-xs text-[#E6B7A9]">₹2,000</span>
+                        </button>
+                        <button
+                            class="border border-white/10 bg-white/5 rounded-xl p-4 text-left hover:border-white/30 transition-colors">
+                            <span class="block text-sm text-white mb-1">Velvet Box</span>
+                            <span class="block text-xs text-[#E6B7A9]">₹4,500</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Products to Add -->
+                <section>
+                    <h3 class="font-hero text-xl text-white mb-4 border-b border-white/10 pb-2">Add Items</h3>
+                    <p class="text-xs text-white/50 mb-4 tracking-wide font-light">Click to add items to your hamper.
+                    </p>
+
+                    <div class="space-y-3">
+                        <!-- Item -->
+                        <div class="flex justify-between items-center p-3 border border-white/5 rounded-lg hover:border-white/20 transition-colors cursor-pointer group"
+                            onclick="window.addConfigItem('wine', 8500)">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 bg-[#111] rounded-md border border-white/10 flex items-center justify-center text-xl">
+                                    🍷</div>
+                                <div>
+                                    <span
+                                        class="block text-sm text-white group-hover:text-[#E6B7A9] transition-colors">Vintage
+                                        Merlot</span>
+                                    <span class="block text-xs text-white/50">₹8,500</span>
+                                </div>
+                            </div>
+                            <button
+                                class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-white/50 group-hover:text-[#E6B7A9] group-hover:border-[#E6B7A9] transition-colors">+</button>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="flex justify-between items-center p-3 border border-white/5 rounded-lg hover:border-white/20 transition-colors cursor-pointer group"
+                            onclick="window.addConfigItem('chocolate', 1500)">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 bg-[#111] rounded-md border border-white/10 flex items-center justify-center text-xl">
+                                    🍫</div>
+                                <div>
+                                    <span
+                                        class="block text-sm text-white group-hover:text-[#E6B7A9] transition-colors">Swiss
+                                        Truffles</span>
+                                    <span class="block text-xs text-white/50">₹1,500</span>
+                                </div>
+                            </div>
+                            <button
+                                class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-white/50 group-hover:text-[#E6B7A9] group-hover:border-[#E6B7A9] transition-colors">+</button>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="flex justify-between items-center p-3 border border-white/5 rounded-lg hover:border-white/20 transition-colors cursor-pointer group"
+                            onclick="window.addConfigItem('flower', 2500)">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 bg-[#111] rounded-md border border-white/10 flex items-center justify-center text-xl">
+                                    🌹</div>
+                                <div>
+                                    <span
+                                        class="block text-sm text-white group-hover:text-[#E6B7A9] transition-colors">Orchid
+                                        Bundle</span>
+                                    <span class="block text-xs text-white/50">₹2,500</span>
+                                </div>
+                            </div>
+                            <button
+                                class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-white/50 group-hover:text-[#E6B7A9] group-hover:border-[#E6B7A9] transition-colors">+</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="font-hero text-xl text-white mb-4 border-b border-white/10 pb-2">Gift Message</h3>
+                    <textarea
+                        class="w-full bg-[#111] border border-white/10 rounded-xl p-4 text-sm font-light text-white focus:outline-none focus:border-[#E6B7A9] resize-none h-24"
+                        placeholder="Write your personalized message here..."></textarea>
+                </section>
+            </div>
+        </div>
+
+    </main>
+
+    <script type="module" src="/src/pages/configurator.js"></script>
+</body>
+
+</html>

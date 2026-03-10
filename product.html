@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Royal Cellar | Ilhamm</title>
+    <link href="/styles/tailwind.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-[#111111] text-[#FFF6F2] font-body overflow-x-hidden antialiased pt-24">
+
+    <div id="navbar-container"></div>
+
+    <main class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row gap-16 min-h-[80vh]">
+
+        <!-- Left: 3D Product Viewer Container -->
+        <div class="w-full md:w-1/2 relative bg-gradient-to-br from-[#1a0a10] to-[#111] rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(90,15,46,0.1)] border border-[#5A0F2E]/20"
+            style="min-height: 500px;">
+            <div id="product-canvas-container" class="absolute inset-0 z-0 cursor-grab active:cursor-grabbing"></div>
+
+            <div
+                class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 bg-[#111]/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 flex items-center gap-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E6B7A9" stroke-width="1.5">
+                    <path
+                        d="M21 12C21 16.9706 16.9706 21 12 21M21 12C21 7.02944 16.9706 3 12 3M21 12H3M12 21C7.02944 21 3 16.9706 3 12M12 21C13.6569 21 15 16.9706 15 12C15 7.02944 13.6569 3 12 3M12 21C10.3431 21 9 16.9706 9 12C9 7.02944 10.3431 3 12 3M3 12C3 7.02944 7.02944 3 12 3" />
+                </svg>
+                <span class="text-xs tracking-widest uppercase text-[#E6B7A9]">Drag to inspect 360°</span>
+            </div>
+        </div>
+
+        <!-- Right: Product Details & Config -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center py-10">
+            <span class="text-[#E6B7A9] text-xs font-medium tracking-widest uppercase mb-4 block" id="product-type">Wine
+                & Cheese</span>
+            <h1 class="font-hero text-5xl md:text-6xl text-gold-gradient mb-4" id="product-name">The Royal Cellar</h1>
+
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-3xl text-white font-light" id="product-price">₹15,000</span>
+                <span class="h-6 w-px bg-white/20"></span>
+                <div class="flex items-center gap-1 text-[#E6B7A9] text-sm">
+                    <span>★★★★★</span>
+                    <span class="text-white/50 ml-1">(42 Reviews)</span>
+                </div>
+            </div>
+
+            <p class="text-white/70 font-light leading-relaxed mb-10 max-w-lg">
+                An exquisite collection of vintage wines paired with artisanal aged cheeses. This timeless combination
+                is nestled in a hand-woven wicker basket lined with rich silk.
+            </p>
+
+            <!-- Customization Options -->
+            <div class="space-y-6 mb-10">
+                <div>
+                    <h4 class="text-sm font-medium tracking-wide mb-3">Ribbon Color</h4>
+                    <div class="flex gap-4">
+                        <button
+                            class="w-8 h-8 rounded-full bg-[#5A0F2E] border-2 border-white ring-2 ring-transparent transition-all hover:scale-110 focus:ring-[#E6B7A9]"></button>
+                        <button
+                            class="w-8 h-8 rounded-full bg-[#E6B7A9] border-2 border-transparent transition-all hover:scale-110 focus:ring-[#E6B7A9]"></button>
+                        <button
+                            class="w-8 h-8 rounded-full bg-[#d4af37] border-2 border-transparent transition-all hover:scale-110 focus:ring-[#E6B7A9]"></button>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-medium tracking-wide mb-3">Add a Greeting Card (+ ₹500)</h4>
+                    <textarea
+                        class="w-full bg-[#111] border border-white/20 rounded-xl p-4 text-sm font-light text-white focus:outline-none focus:border-[#E6B7A9] resize-none h-20"
+                        placeholder="Your message..."></textarea>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex gap-4">
+                <button
+                    class="flex-1 bg-[#5A0F2E] hover:bg-[#7a143e] text-white py-4 rounded-full transition-all duration-300 font-medium uppercase tracking-widest text-sm shadow-[0_0_20px_rgba(90,15,46,0.5)]">
+                    Add to Cart
+                </button>
+                <button
+                    class="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/5 transition-colors text-xl">
+                    ♡
+                </button>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/10 flex gap-6 text-xs text-white/50 uppercase tracking-widest">
+                <span class="flex gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor">
+                        <path d="M5 13l4 4L19 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg> Next Day Delivery</span>
+                <span class="flex gap-2 items-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg> Secure Payment</span>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script type="module" src="/src/pages/product.js"></script>
+</body>
+
+</html>

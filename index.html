@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph Meta Tags for Link Previews -->
+    <meta property="og:title" content="Ilhamm | Luxury Gifting Universe" />
+    <meta property="og:description"
+        content="Luxury Hampers Crafted for Every Celebration. Step into our digital universe." />
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1200&fit=crop" />
+    <meta property="og:url" content="https://ilhamm-hampers.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>Ilhamm | Luxury Gifting Universe</title>
+    <link href="/styles/tailwind.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-[#111111] text-[#FFF6F2] font-body overflow-x-hidden antialiased">
+
+    <div id="navbar-container"></div>
+
+    <!-- Hero Section (Full Screen 3D) -->
+    <main>
+        <section id="hero-section" class="relative w-full h-screen overflow-hidden flex items-center justify-center">
+            <!-- 3D Canvas Container -->
+            <div id="hero-canvas-container" class="absolute inset-0 z-0 pointer-events-none"></div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 mt-20">
+                <h1 class="font-hero text-5xl md:text-7xl lg:text-8xl mb-6 text-gold-gradient tracking-tight">
+                    Ilhamm
+                </h1>
+                <p class="text-lg md:text-xl text-[#E6B7A9] font-light max-w-2xl mx-auto mb-10 tracking-wide">
+                    Luxury Hampers Crafted for Every Celebration. Step into our digital universe.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="/marketplace.html"
+                        class="px-8 py-4 bg-[#5A0F2E] hover:bg-[#7a143e] text-white rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(90,15,46,0.5)] uppercase tracking-widest text-sm relative overflow-hidden group">
+                        <span class="relative z-10">Explore Hampers</span>
+                        <div
+                            class="absolute inset-0 h-full w-full scale-0 rounded-full transition-all duration-300 group-hover:scale-100 group-hover:bg-white/10 z-0">
+                        </div>
+                    </a>
+                    <a href="/configurator.html"
+                        class="px-8 py-4 bg-transparent border border-[#E6B7A9] text-[#E6B7A9] hover:bg-[#E6B7A9]/10 rounded-full transition-all duration-300 uppercase tracking-widest text-sm">
+                        Build Your Own
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div
+                class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-70 animate-bounce">
+                <span class="text-xs uppercase tracking-widest mb-2 text-[#E6B7A9]">Scroll to Explore</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="stroke-[#E6B7A9]">
+                    <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Cinematic Scroll Story Sequence -->
+        <div id="scroll-story-container" class="relative w-full">
+            <!-- Pinned 3D Element Container during scroll -->
+            <div id="story-canvas-container"
+                class="sticky top-0 w-full h-screen z-0 pointer-events-none opacity-0 transition-opacity duration-1000">
+            </div>
+
+            <section
+                class="story-section min-h-screen flex items-center justify-start px-10 md:px-32 relative z-10 pointers-events-none">
+                <div
+                    class="max-w-xl text-left bg-[#111111]/60 backdrop-blur-md p-10 rounded-2xl border border-white/5 opacity-0 story-text inline-block">
+                    <h2 class="font-hero text-4xl md:text-5xl lg:text-6xl text-gold-gradient mb-6">Handpicked Luxury
+                    </h2>
+                    <p class="text-[#FFF6F2]/80 leading-relaxed text-lg font-light">
+                        Discover the finest selections of artisanal chocolates, vintage wines, and exotic blooms. Each
+                        element is carefully chosen to create unforgettable moments of joy and celebration.
+                    </p>
+                </div>
+            </section>
+
+            <section
+                class="story-section min-h-screen flex items-center justify-end px-10 md:px-32 relative z-10 pointers-events-none">
+                <div
+                    class="max-w-xl text-left bg-[#111111]/60 backdrop-blur-md p-10 rounded-2xl border border-white/5 opacity-0 story-text inline-block">
+                    <h2 class="font-hero text-4xl md:text-5xl lg:text-6xl text-gold-gradient mb-6">Crafted with Care
+                    </h2>
+                    <p class="text-[#FFF6F2]/80 leading-relaxed text-lg font-light">
+                        Our master artisans assemble every hamper with precision and passion. The delicate ribbons, the
+                        bespoke packaging—every detail speaks volumes of your affection.
+                    </p>
+                </div>
+            </section>
+
+            <section
+                class="story-section min-h-screen flex items-center justify-center px-10 md:px-32 relative z-10 pointers-events-none">
+                <div
+                    class="max-w-2xl text-center bg-[#111111]/60 backdrop-blur-md p-10 rounded-2xl border border-white/5 opacity-0 story-text inline-block">
+                    <h2 class="font-hero text-5xl md:text-7xl text-gold-gradient mb-6">Step Inside</h2>
+                    <p class="text-[#FFF6F2]/80 leading-relaxed text-lg font-light mb-10">
+                        Experience our digital boutique. Browse the collections or step into the metaverse showroom for
+                        a truly immersive journey.
+                    </p>
+                    <a href="/showroom.html"
+                        class="inline-block px-8 py-4 bg-[#E6B7A9] text-[#111111] font-medium rounded-full transition-transform hover:scale-105 uppercase tracking-widest text-sm">
+                        Enter Showroom
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Featured Hampers Section -->
+        <section class="py-32 px-6 md:px-20 bg-gradient-to-b from-[#111111] to-[#1a0a10]">
+            <div class="text-center mb-20">
+                <h2 class="font-hero text-4xl md:text-6xl text-gold-gradient">Curated Collections</h2>
+                <div class="h-px w-24 bg-[#5A0F2E] mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto" id="featured-hampers-grid">
+                <!-- Generated by JS -->
+            </div>
+
+            <div class="text-center mt-20">
+                <a href="/marketplace.html"
+                    class="inline-flex items-center gap-2 text-[#E6B7A9] hover:text-white transition-colors uppercase tracking-widest text-sm border-b border-[#E6B7A9] pb-1">
+                    View All Collections
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script type="module" src="/src/pages/home.js"></script>
+</body>
+
+</html>
